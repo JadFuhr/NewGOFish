@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title> {{ title }} </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    </head>
+
+    <body>
+
+        <p>
+            <ul>
+                {% for message in get_flashed_messages() %}
+            
+                    <li>{{ message }}</li>
+                    
+                {% endfor %}
+            </ul>
+        </p>
+
+        {% block the_body %}
+        {% endblock %}
+    
+    
+    <div id ="restartButton"><a href="/startgame">Restart</a></div>
+
+    </body>
+
+</html>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+    <div class = "game">
+    <h2>Do you have a {{ value }}?</h2>
+
+        <div class="imagesPlay">
+        {% for card in cards %}
+        
+           <a href="/pick/{{ card[: card.find("_")] }}"><img src="/static/cards/{{ card }}" alt="{{ card }}" class="cardImage"></a>
+
+        {% endfor %}
+        </div>
+
+        <p>
+            <a href="/pick/0">No, I don't have a {{ value }} card.</a>
+        </p>
+        
+    </div>
+{% endblock %}

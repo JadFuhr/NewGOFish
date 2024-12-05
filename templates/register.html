@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+<div class="register-container">
+    <h1>Register</h1>
+    <form action="{{url_for('register')}}" method="POST">
+        <input type="text" id="username" name="username" placeholder="Enter your name" required>
+        <button type="submit">Register</button>
+    </form>
+    <button onclick="window.location.href='/leaderboards'">Leaderboard</button>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+<div class = "game">
+
+    <h2>The computer has {{ n_computer }} cards</h2>
+
+    <div class="imagesComp">
+        {% for _ in range(n_computer) %}
+            
+            <img src="/static/cards/back.png" class = "cardImage">
+
+        {% endfor %}
+    </div>
+
+    <br>
+
+    <h2>Here are your cards</h2>
+
+    <div class="imagesPlay">
+        {% for card in cards %}
+        
+            <a href="/select/{{ card[: card.find("_")] }}"><img src="/static/cards/{{ card }}" alt="{{ card }}" class="cardImage"></a>
+
+        {% endfor %}
+    </div>    
+</div>
+
+{% endblock %}
