@@ -18,11 +18,14 @@
 
     <h2>Here are your cards</h2>
 
-    <div class="imagesPlay">
+    <div id="imagesPlay">
         {% for card in cards %}
-        
-            <a href="/select/{{ card[: card.find("_")] }}"><img src="/static/cards/{{ card }}" alt="{{ card }}" class="cardImage"></a>
-
+        <button hx-get="/select/{{ card[: card.find("_")] }}"
+            hx-trigger="click"
+            hx-target="#imagesPlay"
+            hx-swap="outerHTML">
+            <img src="/static/cards/{{ card }}" class="cardImage">
+        +</button>
         {% endfor %}
     </div>    
 </div>

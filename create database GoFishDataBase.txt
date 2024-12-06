@@ -4,5 +4,6 @@ grant all on GoFishDataBase.* to 'GoFishUser'@'localhost' identified by 'thisisa
 
 create table players(
 id int auto_increment primary key,
-handle varchar(50) unique not null
+handle varchar(50) unique not null,
+winAmounts int not null
 );

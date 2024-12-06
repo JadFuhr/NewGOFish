@@ -37,13 +37,13 @@ h2{
     align-items: center;
 }
 
-.imagesComp,.imagesPlay{
+#imagesComp,#imagesPlay{
     display: flex;
     flex-direction: row; 
     gap: 10px; 
 }
 
-.imagesComp{
+#imagesComp{
     margin-bottom: 20px;
 }
 
